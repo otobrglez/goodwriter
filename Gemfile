@@ -2,6 +2,7 @@ source :rubygems
 
 gem 'foreman'
 gem 'oj'
+gem 'redis'
 
 group :development, :test do
 	gem 'pry'

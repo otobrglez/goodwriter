@@ -1,11 +1,13 @@
-defaults: &:defaults
-  redis_url: <%=  %>
+defaults: &defaults
+  redis_url: redis://127.0.0.1:8877
 
 development:
   <<: *defaults
 
 test:
   <<: *defaults
+  redis_url: redis://127.0.0.1:8877
+  redis_db: 4
 
 production:
-  <<: *defaults
+  redis_url: <%= ENV['REDIS_URL'] %>
