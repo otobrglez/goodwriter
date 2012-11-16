@@ -1,0 +1,3 @@
+class GoodWriter::Submiter
+
+end

@@ -1,0 +1,1 @@
+redis: ${MY_REDIS_PATH}redis-server ${MY_REDIS_CONFIG}redis.conf

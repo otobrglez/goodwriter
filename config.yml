@@ -1,0 +1,11 @@
+defaults: &:defaults
+  redis_url: <%=  %>
+
+development:
+  <<: *defaults
+
+test:
+  <<: *defaults
+
+production:
+  <<: *defaults

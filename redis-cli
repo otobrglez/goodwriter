@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+
+${MY_REDIS_PATH}/redis-cli -p 8877
+

@@ -1,0 +1,2 @@
+export MY_REDIS_PATH="/home/zver/dev/redis/src/"
+export MY_REDIS_CONFIG="./"
