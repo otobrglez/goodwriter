@@ -1,3 +1,5 @@
 tmp/
 db/redis/
 /redis.conf
+/.project_paths
+
