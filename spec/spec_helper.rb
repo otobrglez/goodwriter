@@ -11,7 +11,6 @@ require 'good_writer'
 
 Spork.prefork do
   require 'rspec/autorun'
-
   RSpec.configure do |c|
   end
 end

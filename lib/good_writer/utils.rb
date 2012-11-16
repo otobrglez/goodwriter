@@ -19,18 +19,15 @@ module GoodWriter::Utils
   end
 
   def self.aredis
-    #unless defined? @@aredis
-    #  url = URI.parse(config["redis_url"])
-    #end
-    #@@aredis ||= EM::Protocols::Redis.connect({
-    #  host: url.host, port: url.port, password: url.password,
-    #  db: (config["redis_db"] rescue 0)
-    #})
+    @@aredis ||= EM::Hiredis.connect config["redis_url"]
+  end
 
-    @@aredis ||= EM::Hiredis.connect(config["redis_url"])
+  def self.aredisp # for push
+    @@aredisp ||= EM::Hiredis.connect config["redis_url"]
   end
 
   def config; GoodWriter::Utils.config end
   def redis; GoodWriter::Utils.redis end
   def aredis; GoodWriter::Utils.aredis end
+  def aredisp; GoodWriter::Utils.aredisp end
 end

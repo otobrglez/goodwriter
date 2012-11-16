@@ -10,6 +10,7 @@ gem 'em-hiredis'
 gem 'goliath'
 
 group :development, :test do
+  gem 'debugger'
 	gem 'pry'
 	gem 'pry-doc'
 	gem 'rspec'
