@@ -3,6 +3,11 @@ source :rubygems
 gem 'foreman'
 gem 'oj'
 gem 'redis'
+gem 'hiredis'
+gem 'em-synchrony'
+gem 'em-redis'
+gem 'em-hiredis'
+gem 'goliath'
 
 group :development, :test do
 	gem 'pry'

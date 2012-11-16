@@ -1,12 +1,12 @@
 defaults: &defaults
-  redis_url: redis://127.0.0.1:8877
+  redis_url: redis://127.0.0.1:8877/0
 
 development:
   <<: *defaults
 
 test:
   <<: *defaults
-  redis_url: redis://127.0.0.1:8877
+  redis_url: redis://127.0.0.1:8877/4
   redis_db: 4
 
 production:

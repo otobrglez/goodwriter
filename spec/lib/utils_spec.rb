@@ -23,4 +23,19 @@ describe GoodWriter::Utils do
     it { subject.get("ichbin").should =~ /brglez/i }
   end
 
+  it "redis synchrony" do
+    EM.synchrony do
+      some_object.aredis.callback do
+        some_object.aredis.should be_connected
+      end
+
+      some_object.aredis.set('ichbin_a', 'bar').callback do
+        some_object.aredis.get('ichbin_a').callback { |value|
+          value.should == "bar"
+          EM.stop
+        }
+      end
+    end
+  end
+
 end
